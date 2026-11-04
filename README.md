@@ -1,9 +1,4 @@
-# Project 3 · Modular app
-
-**Week 13 · Project**  
-**Theme:** One job per function
-
-This README is the full prompt.
+# Week 13 · Strings and structs
 
 
 ## Demo video (required)
@@ -13,72 +8,59 @@ Work without a working video link is incomplete.
 
 **Your demo:** _add your link here_
 
+**Week 13**  
+**Theme:** Text is data, then a struct for the final  
+**Type:** Two practices. Both are due Monday night.
 
-## What to ship
-A small app with a menu, named helpers, and a real quit. If `main` is a novel, split the chapters.
+This week holds the string lesson and the struct lesson. Do both.
 
-## Tracks (pick 1)
-| Track | Shape |
-|-------|--------|
-| **A · Quiz** | Questions, score, replay |
-| **B · Contacts** | Add / list / search lite |
-| **C · Converters** | Menu of conversions, one function each |
+## Part 1 · Strings
+Two string helpers. One returns a string. `size()` is used for a real check (too short, empty, or a label). Not decoration.
 
-## Requirements
-- Multi-function design
-- Loop until quit
-- Validation on the menu
-- Strings and/or arrays as needed
-- README names each function
+- At least two helpers that take `const std::string&` (or return a string)
+- One helper returns a `std::string`
+- `size()` used in a real decision or label
+- README with sample names
+- No `char[]` required
 
-## Sample session (quiz)
-```
-1) Play  2) Quit
-1
-2+2? 4
-Points: 1
-1) Play  2) Quit
-2
+```text
+First: sam
+Last: lee
+Hello, sam lee!
+Length: 7
+Initials: SL
 ```
 
-## Starter
-Start from `main.cpp`.
+The string starter on this page is `assignment-starter.cpp`.
+
+## Part 2 · Structs
+A short proposal for the capstone, and a tiny model: the struct (or two) the final needs, printed from a helper.
+
+- Proposal in the README: track, three features, one paragraph
+- Model program: the core `struct` plus a print helper taking `const T&`
+- Check `course/final-project-prompt.md` for the must-include list
+- A one-screen menu sketch is enough
+- The struct starter is `lab-starter.cpp`, on the lab page
+
+```text
+Track: Mini Bank
+Features: list, deposit, quit
+Noun: Account { name, balance }
+Menu: 1) List  2) Deposit  3) Quit
+```
 
 ## Deliverables
 1. Course-visible GitHub repo
-2. README — functions + sample session
-3. Short demo video (tool + code + run)
+2. README with the string sample and the capstone proposal
+3. Short demo video of both runs
 4. Canvas links
 
-## Scope fence
-No classes, `new`/`delete`, or file I/O required. Structs wait for Week 14 unless you’re already solid.
+## Scope
+No regex. No inheritance. No GUI. The struct model is a sketch, not the final. The final build is week 14. Demo day is week 16.
 
 ## Integrity
 - AI = tutor, not ghostwriter
 - Fake ownership → zero
 - Due: Monday night (not Sunday)
-- Discussions (every week): first post Friday, replies Sunday
+- Discussions: first post Friday, replies Sunday
 - Late: course policy (−10%/day unless stated otherwise)
-
-## Rubric (100)
-
-| Criterion | Pts |
-|-----------|----:|
-| Code submitted that does the work | 50 |
-| Video explanation | 50 |
-
-
-## Getting started
-
-1. Fork this repo on GitHub.
-2. Clone your fork.
-3. Compile and run:
-
-```bash
-g++ -std=c++17 -o program main.cpp && ./program
-```
-
-On Windows (Visual Studio), open `main.cpp` and use **Local Windows Debugger**.
-4. Record a short demo that shows your tool, your code, and a real run.
-5. Paste the video link in the **Demo video** section above.
-6. Submit your fork URL on Canvas.

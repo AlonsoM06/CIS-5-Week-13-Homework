@@ -1,29 +1,27 @@
 #include <iostream>
 #include <string>
 
-// Project 3 — Your Name
-// Track: quiz | contacts | converters
-// CIS 5 Week 13
+// String practice — Your Name
+// CIS 5 Week 13 · Word tools lite
 
-void printMenu() {
-  std::cout << "1) Play  2) Quit\n";
+std::string banner(const std::string& name) {
+  // TODO: return "Hello, " + name + "!"
+  return name;
 }
 
-int askScore() {
-  // TODO: ask a question, return 1 or 0
-  return 0;
+std::string initials(const std::string& first, const std::string& last) {
+  // TODO: return two letters (first[0], last[0]) — check size() first
+  return "";
 }
 
 int main() {
-  int choice = 0;
-  do {
-    printMenu();
-    std::cin >> choice;
-    if (choice == 1) {
-      std::cout << "Points: " << askScore() << "\n";
-    } else if (choice != 2) {
-      std::cout << "Not a choice.\n";
-    }
-  } while (choice != 2);
+  std::string first, last;
+  std::cout << "First: ";
+  std::cin >> first;
+  std::cout << "Last: ";
+  std::cin >> last;
+
+  std::string full = first + " " + last;
+  // TODO: print banner(full), length, initials
   return 0;
 }
