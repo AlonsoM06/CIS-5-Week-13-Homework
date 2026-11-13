@@ -1,4 +1,8 @@
-# Week 13 · Strings and structs
+# Practice 13 · Word tools and a final model
+
+**Week 13 · Strings and structs**  
+**Theme:** Text is data, then the struct your final needs  
+**Due:** Monday night. This assignment is not due Sunday.
 
 
 ## Demo video (required)
@@ -6,61 +10,112 @@
 Paste a link to a short video of you running this assignment (tool + code + run).
 Work without a working video link is incomplete.
 
+The video is half the grade. Run both programs, then explain why each helper takes `const &` and what your struct's fields hold.
+
 **Your demo:** _add your link here_
 
-**Week 13**  
-**Theme:** Text is data, then a struct for the final  
-**Type:** Two practices. Both are due Monday night.
+## What to build
 
-This week holds the string lesson and the struct lesson. Do both.
+Two small programs.
 
-## Part 1 · Strings
-Two string helpers. One returns a string. `size()` is used for a real check (too short, empty, or a label). Not decoration.
+**Part 1 · Word tools** (`main.cpp`). Two string helpers. Both take `const std::string&`.
 
-- At least two helpers that take `const std::string&` (or return a string)
-- One helper returns a `std::string`
-- `size()` used in a real decision or label
-- README with sample names
-- No `char[]` required
+| Function | Job |
+|----------|-----|
+| `std::string banner(const std::string& name)` | Return `"Hello, " + name + "!"` |
+| `std::string initials(const std::string& first, const std::string& last)` | Return the first letter of each word. Check `size()` before reading index 0 |
 
-```text
-First: sam
-Last: lee
-Hello, sam lee!
+**Part 2 · Final model** (`model.cpp`). Pick a track for the final project. Write the struct it needs and a print helper.
+
+| Track | Example struct |
+|-------|----------------|
+| Student Records | `Student { name, id, gpa }` |
+| Text Adventure / Quiz | `Question { prompt, answer, points }` |
+| Personal Budget | `Expense { category, amount }` |
+| Mini Bank | `Account { name, balance }` |
+
+## Requirements
+
+- Use the two Part 1 signatures above exactly
+- `initials` uses `size()` in a real check, so an empty word does not crash
+- Part 2: one `struct` with at least two fields, a print helper that takes `const T&`, and two records made with braces
+- README: the Part 1 sample run, then your proposal: the track, the struct and its fields, and three features you will build in week 14
+- No `char[]` needed
+
+## Sample session
+
+Part 1:
+
+```
+First: Sam
+Last: Lee
+Hello, Sam Lee!
 Length: 7
 Initials: SL
 ```
 
-The string starter on this page is `assignment-starter.cpp`.
+Part 2 (Mini Bank example):
 
-## Part 2 · Structs
-A short proposal for the capstone, and a tiny model: the struct (or two) the final needs, printed from a helper.
-
-- Proposal in the README: track, three features, one paragraph
-- Model program: the core `struct` plus a print helper taking `const T&`
-- Check `course/final-project-prompt.md` for the must-include list
-- A one-screen menu sketch is enough
-- The struct starter is `lab-starter.cpp`, on the lab page
-
-```text
-Track: Mini Bank
-Features: list, deposit, quit
-Noun: Account { name, balance }
-Menu: 1) List  2) Deposit  3) Quit
+```
+Ada 50.25
+Ben 120.5
 ```
 
+Proposal (Mini Bank example):
+
+```
+Track: Mini Bank
+Struct: Account { name, balance }
+Features: list accounts, deposit, withdraw with a balance check
+```
+
+## Starter
+
+`main.cpp` has the two Part 1 signatures and a `main` that reads the names. `model.cpp` has a sample `Account` struct to rename for your track. Put your name in both file-top comments.
+
+## Environment
+
+VS 2022 · **GitHub Codespaces** · Replit · library machines
+
 ## Deliverables
+
 1. Course-visible GitHub repo
-2. README with the string sample and the capstone proposal
-3. Short demo video of both runs
+2. README with the Part 1 run and the proposal
+3. Short demo video of both programs running
 4. Canvas links
 
-## Scope
-No regex. No inheritance. No GUI. The struct model is a sketch, not the final. The final build is week 14. Demo day is week 16.
+## Scope fence
+
+No classes or inheritance. No GUI. Part 2 is a sketch, not the final. The final build is week 14. Demo day is week 16.
 
 ## Integrity
+
 - AI = tutor, not ghostwriter
 - Fake ownership → zero
 - Due: Monday night (not Sunday)
-- Discussions: first post Friday, replies Sunday
+- Discussions (every week): first post Friday, replies Sunday
 - Late: course policy (−10%/day unless stated otherwise)
+
+## Rubric (100)
+
+| Criterion | Pts |
+|-----------|----:|
+| Code submitted that does the work | 50 |
+| Video explanation | 50 |
+
+
+## Getting started
+
+1. Fork this repo on GitHub.
+2. Clone your fork.
+3. Compile and run:
+
+```bash
+g++ -std=c++17 -o words main.cpp && ./words
+g++ -std=c++17 -o model model.cpp && ./model
+```
+
+On Windows (Visual Studio), open the `.cpp` file and use **Local Windows Debugger**.
+4. Record a short demo that shows your tool, your code, and a real run.
+5. Paste the video link in the **Demo video** section above.
+6. Submit your fork URL on Canvas.
