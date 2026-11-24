@@ -42,6 +42,19 @@ Two small programs.
 - README: the Part 1 sample run, then your proposal: the track, the struct and its fields, and three features you will build in week 14
 - No `char[]` needed
 
+// Part 1 sample run: First: Alonso 
+Last: Martinez
+Hello, Alonso Martinez!
+Length: 15
+Initials: AM
+
+Part 2: Proposal 
+Track: Student Record
+Struct: { id, name, gpa}
+Features: list age, height, student balance
+
+
+
 ## Sample session
 
 Part 1:
